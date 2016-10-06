@@ -449,7 +449,7 @@ node_templates:
       retry_after: { get_input: retry_after }
       azure_config: { get_input: azure_config }
       os_family: { get_input: vm_os_family }
-      use_public_ip: false
+      use_public_ip: true
       resource_config:
         hardwareProfile:
           vmSize: { get_input: vm_size }
