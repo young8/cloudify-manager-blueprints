@@ -340,7 +340,7 @@ node_templates:
   virtual_network:
     type: cloudify.azure.nodes.network.VirtualNetwork
     properties:
-      name: {concat:[{get_input: resource_prefix},vnet,{get_input: resource_suffix}]}
+#      name: {concat:[{get_input: resource_prefix},vnet,{get_input: resource_suffix}]}
       location: { get_input: location }
       retry_after: { get_input: retry_after }
       azure_config: { get_input: azure_config }
@@ -351,7 +351,7 @@ node_templates:
   subnet:
     type: cloudify.azure.nodes.network.Subnet
     properties:
-      name: {concat:[{get_input: resource_prefix},subnet,{get_input: resource_suffix}]}
+#      name: {concat:[{get_input: resource_prefix},subnet,{get_input: resource_suffix}]}
       location: { get_input: location }
       retry_after: { get_input: retry_after }
       azure_config: { get_input: azure_config }
@@ -365,7 +365,7 @@ node_templates:
   network_security_group:
     type: cloudify.azure.nodes.network.NetworkSecurityGroup
     properties:
-      name: {concat:[{get_input: resource_prefix},nsg,{get_input: resource_suffix}]}
+#      name: {concat:[{get_input: resource_prefix},nsg,{get_input: resource_suffix}]}
       location: { get_input: location }
       retry_after: { get_input: retry_after }
       azure_config: { get_input: azure_config }
@@ -480,7 +480,6 @@ node_templates:
   vm_public_ip:
     type: cloudify.azure.nodes.network.PublicIPAddress
     properties:
-      name: {concat:[{get_input: resource_prefix},pipvm,{get_input: resource_suffix}]}
       location: { get_input: location }
       retry_after: { get_input: retry_after }
       azure_config: { get_input: azure_config }
@@ -493,7 +492,6 @@ node_templates:
   vm_nic_ip_cfg:
     type: cloudify.azure.nodes.network.IPConfiguration
     properties:
-      name: {concat:[{get_input: resource_prefix},ipvm,{get_input: resource_suffix}]}
       location: { get_input: location }
       retry_after: { get_input: retry_after }
       azure_config: { get_input: azure_config }
@@ -508,7 +506,6 @@ node_templates:
   vm_nic:
     type: cloudify.azure.nodes.network.NetworkInterfaceCard
     properties:
-      name: {concat:[{get_input: resource_prefix},nicvm,{get_input: resource_suffix}]}
       location: { get_input: location }
       retry_after: { get_input: retry_after }
       azure_config: { get_input: azure_config }
