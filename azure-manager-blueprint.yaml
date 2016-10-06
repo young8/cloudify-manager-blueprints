@@ -358,8 +358,6 @@ node_templates:
       resource_config:
         addressPrefix: { get_input: subnet_private_cidr }
     relationships:
-    - type: cloudify.azure.relationships.contained_in_resource_group
-      target: resource_group
     - type: cloudify.azure.relationships.contained_in_virtual_network
       target: virtual_network
 
